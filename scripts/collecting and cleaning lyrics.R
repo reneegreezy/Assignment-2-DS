@@ -1,4 +1,4 @@
-beyonce_lyrics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/beyonce_lyrics.csv')# Using the beyonce lyric data that was found in rfobeyonce_lyrics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/beyonce_lyrics.csv')beyonce_lyrics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-29/beyonce_lyrics.csv')# Using the beyonce lyric data that was found in rfo# We find an already created dataset 
+# We find an already created dataset 
 # The dataset contains lyrics, song title and year for songs on 7 Beyonce albums 
 beyonce_lyrics <- readr::read_csv('./data/raw/beyonce_lyrics.csv')
 
