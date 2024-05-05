@@ -16,7 +16,13 @@ contains_profanity <- function(text) {
 # Filter out rows with profane words in the lyrics
 clean_lyrics <- beyonce_lyrics[!sapply(beyonce_lyrics$lyric, contains_profanity), ]
 
-# We lose 171 lines and have 5985 remaining lines 
+# We lose 171 lines and have 5985 remaining lines
+
+# We then filter out punctuation except apostrophes.
+clean_lyrics$lyric <- gsub("[^[:alnum:][:space:]'*]", "", clean_lyrics$lyric)
+
+# We then also make all the lyrics lower case 
+clean_lyrics$lyric <- tolower(clean_lyrics$lyric)
 
 # Create csv of cleaned data 
 readr::write_csv(clean_lyrics,'./data/derived/beyonce_clean_lyrics.csv')
