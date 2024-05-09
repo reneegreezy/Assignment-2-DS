@@ -4,7 +4,7 @@
 ## Intro
 
 ## Word cloud/ Exploration 
-![Word Cloud](./output/word cloud.png)
+![Word Cloud](https://github.com/reneegreezy/Assignment-2-DS/blob/main/output/word%20cloud.png)
 
 
 
