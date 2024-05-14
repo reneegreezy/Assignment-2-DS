@@ -11,23 +11,25 @@ markov <- function(words, order, line_lengths, song_length){
   word_dict <- list()
   
   # Creating a loop which stores the 
-  for (i in 1:(length(words)-order)) {
-    # storing each sequential list of length order
-    current_phrase <- paste(words[i:(i+order-1)], collapse = " ")
-    
-    #getting the next word of the current phrase 
-    next_word <- words[i+order]
-    
-    # Adding the sequential words to the dictionary 
-    if (!(current_phrase %in% names(word_dict))) {
-      word_dict[[current_phrase]] <- list()
+  for (j in 1:order){
+    for (i in 1:(length(words)-order)) {
+      # storing each sequential list of length order
+      current_phrase <- paste(words[i:(i+j-1)], collapse = " ")
+      
+      #getting the next word of the current phrase 
+      next_word <- words[i+j]
+      
+      # Adding the sequential words to the dictionary 
+      if (!(current_phrase %in% names(word_dict))) {
+        word_dict[[current_phrase]] <- list()
+      }
+      # Adding the next word the the dictionary 
+      word_dict[[current_phrase]][[next_word]] <- ifelse(is.null(word_dict[[current_phrase]][[next_word]]), 1, word_dict[[current_phrase]][[next_word]] + 1)
     }
-    # Adding the next word the the dictionary 
-    word_dict[[current_phrase]][[next_word]] <- ifelse(is.null(word_dict[[current_phrase]][[next_word]]), 1, word_dict[[current_phrase]][[next_word]] + 1)
   }
   
   # having to intialise the first words of the generated song    
-  current_phrase <- paste(sample(words, order), collapse = " ")
+  current_phrase <- paste(sample(words, 1), collapse = " ")
   
   #determine the length of each line in the song + 3 
   # +3 is an estimate for the song to stop generating completely random lines to
@@ -37,11 +39,11 @@ markov <- function(words, order, line_lengths, song_length){
   num_words <- sum(line_length_order) 
   
   # Used to store the full list of lyrics generated 
-  generated_lyrics <- c()
+  generated_lyrics <- current_phrase
+  
   
   
   while (length(generated_lyrics) < num_words ) {
-    generated_lyrics <- c(generated_lyrics, strsplit(current_phrase, " ")[[1]][1])
     
     # checking if the current phrase is in the sequential word dictionary
     if (current_phrase %in% names(word_dict)) {
@@ -53,15 +55,28 @@ markov <- function(words, order, line_lengths, song_length){
       
       # sampling depending on the next words 
       next_word <- sample(next_words, 1, prob = probabilities)
-    } else {
       
-      # In case current phrase is not in the dictionary 
-      next_word <- sample(words, 1)
+      # adding new word to generated lyrics 
+      generated_lyrics <- c(generated_lyrics, next_word)
+      
+      
+      #changing the current phrase so it can start again with length order  
+      current_phrase <- paste(tail(generated_lyrics, order), collapse = " ")
+      
+    } else {
+      if (current_phrase>1){
+        current_phrase <- paste(strsplit(current_phrase, " ")[[1]][-1], collapse = " ")
+      }
+      else{
+        new_word <- paste(sample(words, 1), collapse = " ")
+        generated_lyrics <- c(generated_lyrics, next_word)
+        current_phrase <- paste(tail(generated_lyrics, order), collapse = " ")
+      }
     }
+    next
     
-    # Changing the current phrase to add the new word 
-    current_phrase <- paste(c(tail(strsplit(current_phrase, " ")[[1]], -1), next_word), collapse = " ")
   }
+  
   # break up the long sentence into designated line order lengths 
   full_songs <- list()
   # Loop through each position
@@ -78,7 +93,7 @@ markov <- function(words, order, line_lengths, song_length){
   #adding the last line to the full song 
   full_songs[[length(full_songs) + 1]] <- paste(generated_lyrics, collapse = " ")
   
-  # remove the top 2*order lines 
+  # remove the top 3 lines 
   full_songs <- full_songs[-(1:2*order)]
   
   # Print the broken sentences
