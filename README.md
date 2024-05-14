@@ -36,7 +36,7 @@ We observed that the initial generated lines often relied heavily on these rando
 
 ## Example song produced.
 
-you're done pleasin' me like
+you're done pleasin' me like\
 it's okay ohoh like a
 perm that's been left too
 just won't take ohoh i can see
