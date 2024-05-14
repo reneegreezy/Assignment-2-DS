@@ -7,6 +7,10 @@ Inspired by Hannah Fry's book "The Indisputable Existence of Santa Claus: The Ma
 
  Our data source was a collection of 97 Beyonce songs found on Kaggle https://www.kaggle.com/datasets/yukawithdata/beyonce-track-attribute-data. After analysing this dataset, we created a word cloud to visualise the most frequent themes within Beyonce's lyrics.
 
+## Backgorund 
+
+In the context of lyric generation, Markov chains offer a fascinating approach. By analysing a corpus of song lyrics, Markov chains learn the sequential patterns and probabilities of word transitions. This knowledge enables them to generate new lyrics that mirror the linguistic style and thematic elements of the input data. Through systematic iterations and refinements, Markov chain-based lyric generation becomes a powerful tool for creative expression, allowing users to explore and experiment with language patterns to produce compelling and original song lyrics.
+
 ## Word cloud/ Exploration 
 ![Word Cloud](https://github.com/reneegreezy/Assignment-2-DS/blob/main/output/word%20cloud.png)
 
