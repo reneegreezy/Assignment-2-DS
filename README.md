@@ -37,44 +37,44 @@ We observed that the initial generated lines often relied heavily on these rando
 ## Example song produced.
 
 you're done pleasin' me like\
-it's okay ohoh like a
-perm that's been left too
-just won't take ohoh i can see
-now it's all coming
-so clear to me now i gotta
-you lied and see she's had half of me you
-lied how could you lie you lied
-you need to stop playing 'round with all them
-clowns and the wankstas good girls gotta get down
-with the gangsta's go 'head girl put
-some back and some
-neck up on it while i stand up in the background and check up on it i'ma
-let you work up on
-it ladies let 'em
-check up on
-it watch it while he check up on
-it watch it while he check up on
-it i'ma let you work up
-on it ladies let 'em check up on
-it dip it pop it twerk it stop it check
-on me tonight yeah check on
-it check on
-it check on it check
-on it check on it check
-on it check on it check on it check on it
-check on it ooh boy you
-looking like you like what you see he having such
-a good time won't you
-come over and check up on it
-dip it pop it twerk
-it stop it check on me tonight well it's the king of the underground and
-the king of the hill
-you're tuned into a
-winner that's never takin' a loss
-reppin' houston with beyoncé and
-slim thug the boss diamonds on the wood peel 
-i'm a dirty south soldier draped up in that crown holder thought 
-i told ya i like your wiggle and the way that you know 
+it's okay ohoh like a\
+perm that's been left too\
+just won't take ohoh i can see\
+now it's all coming\
+so clear to me now i gotta\
+you lied and see she's had half of me you\
+lied how could you lie you lied\
+you need to stop playing 'round with all them\
+clowns and the wankstas good girls gotta get down\
+with the gangsta's go 'head girl put\
+some back and some\
+neck up on it while i stand up in the background and check up on it i'ma\
+let you work up on\
+it ladies let 'em\
+check up on\
+it watch it while he check up on\
+it watch it while he check up on\
+it i'ma let you work up\
+on it ladies let 'em check up on\
+it dip it pop it twerk it stop it check\
+on me tonight yeah check on\
+it check on\
+it check on it check\
+on it check on it check\
+on it check on it check on it check on it\
+check on it ooh boy you\
+looking like you like what you see he having such\
+a good time won't you\
+come over and check up on it\
+dip it pop it twerk\
+it stop it check on me tonight well it's the king of the underground and\
+the king of the hill\
+you're tuned into a\
+winner that's never takin' a loss\
+reppin' houston with beyoncé and\
+slim thug the boss diamonds on the wood peel\
+i'm a dirty south soldier draped up in that crown holder thought\
+i told ya i like your wiggle and the way that you know\ 
 
 
 
