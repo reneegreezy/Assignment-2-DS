@@ -1,13 +1,10 @@
-## install.packages("markovchain")
-library(markovchain)
-
 # We create a function to generate song using markov chains 
 # The parameters of the function:
 # words are the full set of all lyrics from the artist
 # order is how we define the probability of the next word x_n by looking at x_{n-1:n-1-m} where m is the order
 # line_lengths is a list of all the different line lengths in the data 
 # song_length defines how many lines you want to be in the song 
- 
+
 
 markov <- function(words, order, line_lengths, song_length){
   # Create a dictionary of word transitions
@@ -34,7 +31,7 @@ markov <- function(words, order, line_lengths, song_length){
   
   #determine the length of each line in the song + 3 
   # +3 is an estimate for the song to stop generating completely random lines to
-  line_length_order <- sample(line_lengths, song_length + 3)
+  line_length_order <- sample(line_lengths[line_lengths > 3], song_length + 2*order,replace = TRUE)
   
   # Determine how many words you want the song to have plus the first few lines generated as they will be completely random 
   num_words <- sum(line_length_order) 
@@ -81,10 +78,11 @@ markov <- function(words, order, line_lengths, song_length){
   #adding the last line to the full song 
   full_songs[[length(full_songs) + 1]] <- paste(generated_lyrics, collapse = " ")
   
-  # remove the top 3 lines 
-  full_songs <- full_songs[-(1:3)]
+  # remove the top 2*order lines 
+  full_songs <- full_songs[-(1:2*order)]
   
   # Print the broken sentences
   return(full_songs)
 }
+
 
