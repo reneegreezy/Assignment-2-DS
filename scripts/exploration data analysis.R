@@ -13,10 +13,12 @@ library("httr")
 library("magrittr")
 library(sentimentr)
 
+
 # Number of songs 
 num_songs <- length(unique(beyonce_lyrics$track_title))
 print(num_songs)
 
+#getting the lines in the lyric
 text <- clean_lyrics$lyric
 
 docs <- Corpus(VectorSource(text))
